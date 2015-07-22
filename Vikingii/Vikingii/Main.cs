@@ -40,17 +40,17 @@ namespace Imperiul_Britanic
 
         private void Main_Load(object sender, EventArgs e)
         {
-            try
-            {
-                SoundPlayer sndplayr = new
-                         SoundPlayer("muzica.wav");
-                sndplayr.Play();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(),
-                               "Error");
-            }
+            //try
+            //{
+            //    SoundPlayer sndplayr = new
+            //             SoundPlayer("muzica.wav");
+            //    sndplayr.Play();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(),
+            //                   "Error");
+            //}
        //     this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
