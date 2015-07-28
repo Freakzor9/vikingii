@@ -24,7 +24,22 @@ namespace Imperiul_Britanic
             ((Main)this.MdiParent).fCopil14 = null;
             this.Close();
         }
-
+        private void note()
+        {
+            lstNote.Items.Clear();
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
+            con.Open();
+            string text = "select * from Scoruri where Mail=@mail";
+            OleDbCommand com = new OleDbCommand(text, con);
+            com.Parameters.AddWithValue("Mail", label7.Text);
+            OleDbDataReader r = com.ExecuteReader();
+            while (r.Read())
+            {
+                lstNote.Items.Add(r["Joc"].ToString() + " Scor:" + r["Scor"] + " " + r["Data"].ToString() + "\r\n");
+            }
+            con.Close();
+            r.Close();
+        }
         private void frmProfil_Load(object sender, EventArgs e)
         {
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
@@ -36,10 +51,17 @@ namespace Imperiul_Britanic
             OleDbDataReader r = com.ExecuteReader();
             while (r.Read())
             {
+                //if(System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+                //{
+                //    lblPic.ImageLocation = ((Main)this.MdiParent).url + "/img/"+; 
+                //}
+                //else
+                //{
                 if (r["Imagine"].ToString() != "")
                 {
                     lblPic.Image = System.Drawing.Image.FromFile(cale + r["Imagine"].ToString());
                 }
+                // }
                 label2.Text = r["Nume"].ToString();
                 label7.Text = r["Mail"].ToString();
                 label8.Text = r["Clasa"].ToString();
@@ -48,22 +70,30 @@ namespace Imperiul_Britanic
             }
             r.Close();
             con.Close();
+            note();
         }
         string deins;
-        private void copiaza_fisier(string sursa, string destinatie)
+        private void copiaza_fisier(string sursa, string destinatie, string mail)
         {
+            string auxm;
+            auxm = mail.Replace("@", "_");
             string numef = Path.GetFileNameWithoutExtension(sursa);
             string extensie = Path.GetExtension(sursa);
             int contor = 0;
-            string numeNou = destinatie + numef + extensie;
+            string numeNou = destinatie + auxm + extensie;
             while (File.Exists(numeNou))
             {
-                contor++;
-                numeNou = destinatie + numef + contor + extensie;
+                if (lblPic.Image != null)
+                {
+                    lblPic.Image.Dispose();
+                }
+                File.Delete(numeNou);
+                //contor++;
+                //numeNou = destinatie + auxm + contor + extensie;
             }
             File.Copy(sursa, numeNou);
-            deins = "/Useri/";
-            deins += Path.GetFileName(sursa);
+            deins = "/img/";
+            deins += auxm + extensie;
             lblPic.Image = System.Drawing.Image.FromFile(numeNou);
         }
 
@@ -73,7 +103,7 @@ namespace Imperiul_Britanic
             {
                 return;
             }
-            copiaza_fisier(ofd.FileName, cale + "/Useri/");
+            copiaza_fisier(ofd.FileName, cale + "/img/", label7.Text);
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
             con.Open();
             string qs = "Update Utilizatori set Imagine = @imagine where Mail=@mail";

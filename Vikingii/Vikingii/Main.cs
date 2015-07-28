@@ -13,6 +13,8 @@ namespace Imperiul_Britanic
 {
     public partial class Main : Form
     {
+        public string url = "http://softed.comli.com/";
+
         public FrmLectii fCopil1 = null;
         public FrmLectii fCopil2 = null;
         public FrmLectii fCopil3 = null;
@@ -29,6 +31,7 @@ namespace Imperiul_Britanic
         public frmSpanzura fCopil13 = null;
         public frmProfil fCopil14 = null;
         public frmUtilizatori fCopil15 = null;
+        public frmSynch fCopil16 = null;
 
         public string nume,nume2;
 
@@ -333,6 +336,16 @@ namespace Imperiul_Britanic
             Variable.acces = "";
             profilUtilizatorToolStripMenuItem1.Visible = false;
             verificareaCunostiintelorToolStripMenuItem.Visible = false;
+        }
+
+        private void sincronizareBazaDeDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fCopil16 == null)
+            {
+                fCopil16 = new frmSynch();
+                fCopil16.MdiParent = this;
+                fCopil16.Show();
+            }
         }
     }
 }

@@ -118,19 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox2.Text" xml:space="preserve">
-    <value>Pentru a va testa cunsotiintele apsati pe "Joc de verificare" . In acest joc trebuie sa apasati pe butoanele ce au in prezent o coroana in centrul lor . Daca raspundeti corect steagul Marii Britanii va fi afisat si veti primi un punct . In caz contrar steagul Frantei va fi afisat . Dupa prima runda apasati pe orice provincie pentru a fi testati si mai departe . Dupa aceste 2 runde un scor va fi afisat pe ecran .</value>
-  </data>
-  <data name="textBox3.Text" xml:space="preserve">
-    <value>Pentru a edita textul sau intrebarile din test intrati in "Editor de soft" , unde veti fi rugat sa va introduceti datele de logare . Dupa aceasta puteti intra in orice fereastra a Lectiilor si sa o editati . Pentru a adauga intrebari apasati dupa logare tasta "ESC" pentru a putea intra in Editorul de intrebari .</value>
+    <value>Pentru a va testa cunsotiintele apsati pe "Joc de verificare" . In acest joc trebuie sa apasati pe butoanele ce au in prezent o coroana in centrul lor . Daca raspundeti corect steagul Suediei va fi afisat si veti primi un punct . In caz contrar steagul Angliei va fi afisat . Dupa prima runda apasati pe orice provincie pentru a fi testati si mai departe . Dupa aceste 2 runde un scor va fi afisat pe ecran .</value>
   </data>
   <data name="textBox4.Text" xml:space="preserve">
-    <value>Pentru a sterge unele intrebari din test mergeti la fereastra "Stergere Intrebare" . Acolo puteti introduce ID-ul intrebarii pe care doriti sa o stergeti . Pentru a afla acest ID mergeti la fereastra "Joc de Verificare" si daca aveti acces de administrator veti putea vedea ID-ul intrebarii ce este pe ecran in momentul respectiv .</value>
+    <value>Pentru a edita software-ul utilizatorul are nevoie un cont de administrator, apoi acesta va observa aparitia unor noi ferestre ce il ajuta in editarea continutului programului . Pentru a edita intrebarile acesta trebuie sa intre in fereastra "Administrare", dupa care sa viziteze sectiunea "Editeaza Intrebari", acolo vor observa toate meniurile si butoanele cu detaliile sugestive . Pentru a edita lectiile, administratorul trebuie sa intre la lectia care doreste sa fie editata, face modificarile dorite, adauga/sterge imagini si apoi apasa pe butonul salveaza .
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABHwAAANBCAIAAAAdqT6FAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7svQV4G0f+/z8LYoMcatokbcrMcL3SXekKV7hye02bNtA2zOTEiZmZ
+        wAAADsABataJCQAA/7JJREFUeF7svQV4G0f+/z8LYoMcatokbcrMcL3SXekKV7hye02bNtA2zOTEiZmZ
         UbaYGS3JsiRbsmTLjHEcbrhpinf3hd//+c/KTmKvHQea5Jr7Ss/r8SPNzg58PjOz8/bOzoJP/nrbxfLx
         GyGuCCQ7X31I5QlxWSAZ+d8OqXghLhckO199SOUJcVkgGfnfDql4IS4XJDtffUjlCXFZIBn53w6peCEu
         FyQ7X31I5TkXYPUnT18Uq4KsDHG5GTYsydpXk5BnrwTDVv33enY0IS9fIf7tXg559kowbNV/r2dHE/Ly
@@ -39219,7 +39217,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA1cAAALuCAYAAABCcOz5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAAd0SU1FB9wBGA06BsX3yCsAAP+fSURBVHhe7P3Plx3Jdd+LclpjTN4AYwzuCFNM
+        DAAACwwBP0AiyAAAAAd0SU1FB9wBGA06BsX3yCsAAP+fSURBVHhe7P3Plx3Jdd+LclpjTN4AYwzuCFNM
         PMEY713rekEUZT7BV33VFmSRoou2IPJBtNQUiyIbzZKazR8li6AkiKTMhmSxKfaVSV6Ld8lsixO9t5Ym
         PfHUo/4bzsudkd8T39i540dmRuY5pypqrc/KiP0rdvwq1MY5depD7at9ta/21b7aV/tqX+2rfbWv9tW+
         2lf7al/tq321r/bVvtpX+2pf7at9ta/21b7aV/tqX+2rfbWv9tW+2lf7al/tq321r/bVvtpX+2pf7at9

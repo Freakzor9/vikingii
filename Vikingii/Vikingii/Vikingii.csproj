@@ -158,6 +158,12 @@
     <Compile Include="FrmSteaguriJoc.Designer.cs">
       <DependentUpon>FrmSteaguriJoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSynch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSynch.Designer.cs">
+      <DependentUpon>frmSynch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUtilizatori.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utilizatori.cs" />
     <Compile Include="Variable.cs" />
     <EmbeddedResource Include="FrmAjutor.resx">
       <DependentUpon>FrmAjutor.cs</DependentUpon>
@@ -214,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSteaguriJoc.resx">
       <DependentUpon>FrmSteaguriJoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSynch.resx">
+      <DependentUpon>frmSynch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUtilizatori.resx">
       <DependentUpon>frmUtilizatori.cs</DependentUpon>

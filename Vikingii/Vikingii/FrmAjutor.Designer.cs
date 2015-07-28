@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAjutor));
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -49,17 +48,6 @@
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(337, 425);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(346, 94);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = resources.GetString("textBox3.Text");
-            // 
             // textBox4
             // 
             this.textBox4.Enabled = false;
@@ -67,7 +55,7 @@
             this.textBox4.Location = new System.Drawing.Point(29, 425);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(302, 94);
+            this.textBox4.Size = new System.Drawing.Size(817, 77);
             this.textBox4.TabIndex = 4;
             this.textBox4.Text = resources.GetString("textBox4.Text");
             // 
@@ -93,7 +81,7 @@
             this.textBox1.Size = new System.Drawing.Size(157, 93);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Pentru a incepe utilizarea acestui soft apasati pe casuta \"Lectii\" din meniul de " +
-                "start . De acolo selectati lectia dorita , si incepeti sa invatati .\r\n";
+    "start . De acolo selectati lectia dorita , si incepeti sa invatati .\r\n";
             // 
             // pictureBox1
             // 
@@ -116,7 +104,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
@@ -136,7 +123,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;

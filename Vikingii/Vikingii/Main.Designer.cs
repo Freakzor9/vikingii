@@ -42,17 +42,18 @@
             this.recunoasteImaginileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regiiVikingiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spanzuratoareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profilUtilizatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conectareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deconectareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profilUtilizatorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modDeAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorIntrebariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilizatoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.conectareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profilUtilizatorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deconectareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sincronizareBazaDeDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -183,14 +184,6 @@
             this.spanzuratoareaToolStripMenuItem.Text = "Spanzuratoarea";
             this.spanzuratoareaToolStripMenuItem.Click += new System.EventHandler(this.bibliografieToolStripMenuItem_Click);
             // 
-            // ajutorToolStripMenuItem
-            // 
-            this.ajutorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
-            this.ajutorToolStripMenuItem.Name = "ajutorToolStripMenuItem";
-            this.ajutorToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
-            this.ajutorToolStripMenuItem.Text = "Ajutor";
-            this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
-            // 
             // profilUtilizatorToolStripMenuItem
             // 
             this.profilUtilizatorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -203,11 +196,41 @@
             this.profilUtilizatorToolStripMenuItem.Text = "Utilizatori";
             this.profilUtilizatorToolStripMenuItem.Click += new System.EventHandler(this.profilUtilizatorToolStripMenuItem_Click);
             // 
+            // conectareToolStripMenuItem
+            // 
+            this.conectareToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("conectareToolStripMenuItem.BackgroundImage")));
+            this.conectareToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.conectareToolStripMenuItem.Name = "conectareToolStripMenuItem";
+            this.conectareToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.conectareToolStripMenuItem.Text = "Conectare";
+            this.conectareToolStripMenuItem.Click += new System.EventHandler(this.conectareToolStripMenuItem_Click);
+            // 
+            // deconectareToolStripMenuItem
+            // 
+            this.deconectareToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deconectareToolStripMenuItem.BackgroundImage")));
+            this.deconectareToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.deconectareToolStripMenuItem.Name = "deconectareToolStripMenuItem";
+            this.deconectareToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.deconectareToolStripMenuItem.Text = "Deconectare";
+            this.deconectareToolStripMenuItem.Visible = false;
+            this.deconectareToolStripMenuItem.Click += new System.EventHandler(this.deconectareToolStripMenuItem_Click);
+            // 
+            // profilUtilizatorToolStripMenuItem1
+            // 
+            this.profilUtilizatorToolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profilUtilizatorToolStripMenuItem1.BackgroundImage")));
+            this.profilUtilizatorToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.profilUtilizatorToolStripMenuItem1.Name = "profilUtilizatorToolStripMenuItem1";
+            this.profilUtilizatorToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.profilUtilizatorToolStripMenuItem1.Text = "Profil utilizator";
+            this.profilUtilizatorToolStripMenuItem1.Visible = false;
+            this.profilUtilizatorToolStripMenuItem1.Click += new System.EventHandler(this.profilUtilizatorToolStripMenuItem1_Click);
+            // 
             // modDeAdministratorToolStripMenuItem
             // 
             this.modDeAdministratorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editorIntrebariToolStripMenuItem,
-            this.utilizatoriToolStripMenuItem});
+            this.utilizatoriToolStripMenuItem,
+            this.sincronizareBazaDeDateToolStripMenuItem});
             this.modDeAdministratorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
             this.modDeAdministratorToolStripMenuItem.Name = "modDeAdministratorToolStripMenuItem";
             this.modDeAdministratorToolStripMenuItem.Size = new System.Drawing.Size(125, 29);
@@ -219,7 +242,7 @@
             this.editorIntrebariToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editorIntrebariToolStripMenuItem.BackgroundImage")));
             this.editorIntrebariToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
             this.editorIntrebariToolStripMenuItem.Name = "editorIntrebariToolStripMenuItem";
-            this.editorIntrebariToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.editorIntrebariToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
             this.editorIntrebariToolStripMenuItem.Text = "Editor Intrebari";
             this.editorIntrebariToolStripMenuItem.Click += new System.EventHandler(this.editorIntrebariToolStripMenuItem_Click_1);
             // 
@@ -228,9 +251,17 @@
             this.utilizatoriToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("utilizatoriToolStripMenuItem.BackgroundImage")));
             this.utilizatoriToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
             this.utilizatoriToolStripMenuItem.Name = "utilizatoriToolStripMenuItem";
-            this.utilizatoriToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.utilizatoriToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
             this.utilizatoriToolStripMenuItem.Text = "Utilizatori";
             this.utilizatoriToolStripMenuItem.Click += new System.EventHandler(this.utilizatoriToolStripMenuItem_Click);
+            // 
+            // ajutorToolStripMenuItem
+            // 
+            this.ajutorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.ajutorToolStripMenuItem.Name = "ajutorToolStripMenuItem";
+            this.ajutorToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.ajutorToolStripMenuItem.Text = "Ajutor";
+            this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -259,34 +290,14 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // conectareToolStripMenuItem
+            // sincronizareBazaDeDateToolStripMenuItem
             // 
-            this.conectareToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("conectareToolStripMenuItem.BackgroundImage")));
-            this.conectareToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
-            this.conectareToolStripMenuItem.Name = "conectareToolStripMenuItem";
-            this.conectareToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
-            this.conectareToolStripMenuItem.Text = "Conectare";
-            this.conectareToolStripMenuItem.Click += new System.EventHandler(this.conectareToolStripMenuItem_Click);
-            // 
-            // profilUtilizatorToolStripMenuItem1
-            // 
-            this.profilUtilizatorToolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profilUtilizatorToolStripMenuItem1.BackgroundImage")));
-            this.profilUtilizatorToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
-            this.profilUtilizatorToolStripMenuItem1.Name = "profilUtilizatorToolStripMenuItem1";
-            this.profilUtilizatorToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
-            this.profilUtilizatorToolStripMenuItem1.Text = "Profil utilizator";
-            this.profilUtilizatorToolStripMenuItem1.Visible = false;
-            this.profilUtilizatorToolStripMenuItem1.Click += new System.EventHandler(this.profilUtilizatorToolStripMenuItem1_Click);
-            // 
-            // deconectareToolStripMenuItem
-            // 
-            this.deconectareToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deconectareToolStripMenuItem.BackgroundImage")));
-            this.deconectareToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
-            this.deconectareToolStripMenuItem.Name = "deconectareToolStripMenuItem";
-            this.deconectareToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
-            this.deconectareToolStripMenuItem.Text = "Deconectare";
-            this.deconectareToolStripMenuItem.Visible = false;
-            this.deconectareToolStripMenuItem.Click += new System.EventHandler(this.deconectareToolStripMenuItem_Click);
+            this.sincronizareBazaDeDateToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sincronizareBazaDeDateToolStripMenuItem.BackgroundImage")));
+            this.sincronizareBazaDeDateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.sincronizareBazaDeDateToolStripMenuItem.Name = "sincronizareBazaDeDateToolStripMenuItem";
+            this.sincronizareBazaDeDateToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+            this.sincronizareBazaDeDateToolStripMenuItem.Text = "Sincronizare baza de date";
+            this.sincronizareBazaDeDateToolStripMenuItem.Click += new System.EventHandler(this.sincronizareBazaDeDateToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -340,6 +351,7 @@
         public System.Windows.Forms.ToolStripMenuItem profilUtilizatorToolStripMenuItem1;
         public System.Windows.Forms.ToolStripMenuItem conectareToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem deconectareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sincronizareBazaDeDateToolStripMenuItem;
 
     }
 }

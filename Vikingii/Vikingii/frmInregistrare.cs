@@ -8,7 +8,9 @@ using System.IO;
 using System.Data.OleDb;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Security.Permissions;
+using Microsoft.Win32;
+using System.Net;
 namespace Imperiul_Britanic
 {
     public partial class frmInregistrare : Form
@@ -24,23 +26,41 @@ namespace Imperiul_Britanic
         }
         private void inregistrare()
         {
-            txtClasa.Text = txtClasa.Text.Replace(" ", "");
+            string URI = ((Main)this.MdiParent).url + "cere.php"; //how to post data from c# in php http://stackoverflow.com/questions/5401501/how-to-post-data-to-specific-url-using-webclient-in-c-sharp
+            string parametri = "p=123soft&m=" + txtMail.Text.Trim() + "&n=" + txtNume.Text.Trim()+"&acc=0&cls="+txtClasa.Text.Trim()+"tip=User";
+            string response;
+            System.Net.ServicePointManager.Expect100Continue = false; //http://stackoverflow.com/questions/566437/http-post-returns-the-error-417-expectation-failed-c
+            using (WebClient wclient = new WebClient())
+            {
+                wclient.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
+                try
+                {
+                    response = wclient.UploadString(URI, parametri);
+                    string[] date = new string[10];
+                    date = response.Split('\n');
+                }
+                catch
+                {
+                    txtClasa.Text = txtClasa.Text.Replace(" ", "");
 
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
-            con.Open();
-            string qs = "Insert into Utilizatori (Mail,Nume,Clasa,Gen,Parola,Acceptat,Acces) values(@mail,@nume,@clasa,@gen,@parola,@acceptat,@acces)";
-            OleDbCommand com = new OleDbCommand(qs, con);
-            com.Parameters.AddWithValue("Mail", txtMail.Text);
-            com.Parameters.AddWithValue("Nume", txtNume.Text);
-            com.Parameters.AddWithValue("Clasa", txtClasa.Text);
-            com.Parameters.AddWithValue("Gen", cmbGen.SelectedItem.ToString());
-            com.Parameters.AddWithValue("Parola", txtParola.Text);
-            com.Parameters.AddWithValue("Acceptat", 0);
-            com.Parameters.AddWithValue("Acces", "User");
-            int asd = com.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Inregistrare finalizata, va rugam asteptati acceptul unui administrator");
-            this.Close();
+                    OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
+                    con.Open();
+                    string qs = "Insert into Utilizatori (Mail,Nume,Clasa,Gen,Parola,Acceptat,Acces) values(@mail,@nume,@clasa,@gen,@parola,@acceptat,@acces)";
+                    OleDbCommand com = new OleDbCommand(qs, con);
+                    com.Parameters.AddWithValue("Mail", txtMail.Text);
+                    com.Parameters.AddWithValue("Nume", txtNume.Text);
+                    com.Parameters.AddWithValue("Clasa", txtClasa.Text);
+                    com.Parameters.AddWithValue("Gen", cmbGen.SelectedItem.ToString());
+                    com.Parameters.AddWithValue("Parola", txtParola.Text);
+                    com.Parameters.AddWithValue("Acceptat", 0);
+                    com.Parameters.AddWithValue("Acces", "User");
+                    int asd = com.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Inregistrare finalizata, va rugam asteptati acceptul unui administrator");
+                    this.Close();
+                }
+            }
+
         }
         private void label6_Click(object sender, EventArgs e)
         {

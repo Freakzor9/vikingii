@@ -52,6 +52,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lstImagini = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtSave = new System.Windows.Forms.Button();
+            this.lstNote = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.lblPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
@@ -146,16 +148,16 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(292, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 22);
+            this.label1.Size = new System.Drawing.Size(49, 22);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Nume";
+            this.label1.Text = "Mail";
             // 
             // lblPic
             // 
             this.lblPic.BackColor = System.Drawing.Color.Transparent;
-            this.lblPic.Location = new System.Drawing.Point(501, 88);
+            this.lblPic.Location = new System.Drawing.Point(783, 88);
             this.lblPic.Name = "lblPic";
-            this.lblPic.Size = new System.Drawing.Size(217, 319);
+            this.lblPic.Size = new System.Drawing.Size(217, 316);
             this.lblPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lblPic.TabIndex = 28;
             this.lblPic.TabStop = false;
@@ -252,7 +254,7 @@
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(710, 47);
+            this.pbClose.Location = new System.Drawing.Point(975, 19);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(25, 25);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -298,11 +300,31 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(291, 21);
+            this.label11.Location = new System.Drawing.Point(404, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(234, 27);
             this.label11.TabIndex = 33;
             this.label11.Text = "Administrare utilizatori";
+            // 
+            // txtSave
+            // 
+            this.txtSave.Location = new System.Drawing.Point(501, 438);
+            this.txtSave.Name = "txtSave";
+            this.txtSave.Size = new System.Drawing.Size(118, 23);
+            this.txtSave.TabIndex = 34;
+            this.txtSave.Text = "Salvare Modificare";
+            this.txtSave.UseVisualStyleBackColor = true;
+            this.txtSave.Click += new System.EventHandler(this.txtSave_Click);
+            // 
+            // lstNote
+            // 
+            this.lstNote.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lstNote.FormattingEnabled = true;
+            this.lstNote.Location = new System.Drawing.Point(563, 88);
+            this.lstNote.Name = "lstNote";
+            this.lstNote.Size = new System.Drawing.Size(217, 316);
+            this.lstNote.TabIndex = 1;
+            this.lstNote.SelectedIndexChanged += new System.EventHandler(this.lstUseri_SelectedIndexChanged);
             // 
             // frmUtilizatori
             // 
@@ -311,7 +333,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(108)))), ((int)(((byte)(137)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(807, 489);
+            this.ClientSize = new System.Drawing.Size(1027, 485);
+            this.Controls.Add(this.txtSave);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pbClose);
@@ -334,6 +357,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lstNote);
             this.Controls.Add(this.lstUseri);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -373,5 +397,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox lstImagini;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button txtSave;
+        private System.Windows.Forms.ListBox lstNote;
     }
 }

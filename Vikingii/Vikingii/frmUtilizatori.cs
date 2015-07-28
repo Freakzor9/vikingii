@@ -36,6 +36,13 @@ namespace Imperiul_Britanic
             {
                 return;
             }
+            lstUseri.Items.Clear();
+            lstNume.Items.Clear();
+            lstGen.Items.Clear();
+            lstClasa.Items.Clear();
+            lstAcceptat.Items.Clear();
+            lstAcces.Items.Clear();
+            lstImagini.Items.Clear();
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
             con.Open();
             string text = "";
@@ -51,8 +58,8 @@ namespace Imperiul_Britanic
             OleDbDataReader r = com.ExecuteReader();
             while (r.Read())
             {
-                lstUseri.Items.Add(r["Mail"].ToString());
-                lstNume.Items.Add(r["Nume"].ToString());
+                lstUseri.Items.Add(r["Nume"].ToString());
+                lstNume.Items.Add(r["Mail"].ToString());
                 lstGen.Items.Add(r["Gen"].ToString());
                 lstClasa.Items.Add(r["Clasa"].ToString());
                 lstAcceptat.Items.Add(r["Acceptat"].ToString());
@@ -87,6 +94,21 @@ namespace Imperiul_Britanic
                 label8.Text = lstClasa.Items[lstUseri.SelectedIndex].ToString();
                 label9.Text = lstAcces.Items[lstUseri.SelectedIndex].ToString();
                 label10.Text = lstGen.Items[lstUseri.SelectedIndex].ToString();
+
+                lstNote.Items.Clear();
+                OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
+                con.Open();
+                string text = "select * from Scoruri where Mail=@mail";
+                OleDbCommand com = new OleDbCommand(text, con);
+                com.Parameters.AddWithValue("Mail", lstNume.Items[lstUseri.SelectedIndex]);
+                OleDbDataReader r = com.ExecuteReader();
+                while (r.Read())
+                {
+                    lstNote.Items.Add(r["Joc"].ToString() + " Scor:" + r["Scor"] + " " + r["Data"].ToString() + "\r\n");
+                }
+                con.Close();
+                r.Close();
+
                 if (lstImagini.Items[lstUseri.SelectedIndex].ToString() != "<placeholder>")
                 {
                     lblPic.Image = System.Drawing.Image.FromFile(cale + lstImagini.Items[lstUseri.SelectedIndex].ToString());
@@ -123,6 +145,31 @@ namespace Imperiul_Britanic
             lstNume.Items.Clear();
             lstUseri.Items.Clear();
             schimbareCombo(comboBox1.SelectedIndex);
+        }
+
+        private void txtSave_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
+            con.Open();
+            string qs = "Update Utilizatori SET Acceptat=@acceptat where Mail=@mail";
+            OleDbCommand com = new OleDbCommand(qs, con);
+            if (rbA.Checked == true)
+            {
+                rbA.Checked = true;
+                radioButton1.Checked = false;
+                com.Parameters.AddWithValue("Acceptat", 1);
+                com.Parameters.AddWithValue("Mail", lstNume.Items[lstUseri.SelectedIndex]);
+            }
+            else
+            {
+
+                rbA.Checked = false;
+                radioButton1.Checked = true;
+                com.Parameters.AddWithValue("Acceptat", 0);
+                com.Parameters.AddWithValue("Mail", lstNume.Items[lstUseri.SelectedIndex]);
+            }
+            com.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

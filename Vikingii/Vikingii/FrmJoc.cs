@@ -8,6 +8,9 @@ using System.IO;
 using System.Data.OleDb;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Permissions;
+using Microsoft.Win32;
+using System.Net;
 //
 //Random random = new Random();
 //int randomNumber = random.Next(0, 100);
@@ -39,17 +42,19 @@ namespace Imperiul_Britanic
         {
             lblNume.Text = ((Main)this.MdiParent).nume2;
             lblture.Text = RUNDA1.ToString();
-         //   tbIntrebare.Location = new Point(159, 136);
-        //    tbRaspuns1.Location = new Point(70, 307);
-        //    tbRaspuns2.Location = new Point(70, 433);
-        //    tbRaspuns3.Location = new Point(465, 307);
-        //    tbRaspuns4.Location = new Point(465, 433);
-            
-            if (Variable.acces == "Admin")
-            {
-                tbINTR1.Visible = true;
-                tbINTR2.Visible = true;
-            }
+            //   tbIntrebare.Location = new Point(159, 136);
+            //    tbRaspuns1.Location = new Point(70, 307);
+            //    tbRaspuns2.Location = new Point(70, 433);
+            //    tbRaspuns3.Location = new Point(465, 307);
+            //    tbRaspuns4.Location = new Point(465, 433);
+
+            //if (Variable.acces == "Admin")
+            //{
+            //    tbINTR1.Visible = true;
+            //    tbINTR2.Visible = true;
+            //}
+
+
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data source=" + cale + "\\Soft.accdb");
             con.Open();
             string text = "select * from Intrebari order by rnd(ID)";
@@ -64,6 +69,8 @@ namespace Imperiul_Britanic
                 lstR4.Items.Add(r["R4"].ToString());
                 lstRC.Items.Add(r["RCorect"].ToString());
                 lbID.Items.Add(r["ID"]);
+
+
             }
         }
         public int[] aparitii = new int[100];
