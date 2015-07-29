@@ -73,6 +73,7 @@ namespace Imperiul_Britanic
                         ((Main)this.MdiParent).conectareToolStripMenuItem.Visible = false;
                         ((Main)this.MdiParent).deconectareToolStripMenuItem.Visible = true;
                         ((Main)this.MdiParent).verificareaCunostiintelorToolStripMenuItem.Visible = true;
+                        ((Main)this.MdiParent).nume2 = utilizatori.nume;
 
                         if (utilizatori.tip == "Admin")
                         {
@@ -105,6 +106,7 @@ namespace Imperiul_Britanic
                                 }
                                 flag = 0;
                                 ((Main)this.MdiParent).nume = r["Mail"].ToString();
+                                ((Main)this.MdiParent).nume2 = r["Nume"].ToString();
                                 ((Main)this.MdiParent).profilUtilizatorToolStripMenuItem1.Visible = true;
                                 ((Main)this.MdiParent).conectareToolStripMenuItem.Visible = false;
                                 ((Main)this.MdiParent).deconectareToolStripMenuItem.Visible = true;
@@ -146,6 +148,7 @@ namespace Imperiul_Britanic
                                 ((Main)this.MdiParent).modDeAdministratorToolStripMenuItem.Visible = true;
                             }
                             flag = 0;
+                            ((Main)this.MdiParent).nume2 = r["Nume"].ToString();
                             ((Main)this.MdiParent).nume = r["Mail"].ToString();
                             ((Main)this.MdiParent).profilUtilizatorToolStripMenuItem1.Visible = true;
                             ((Main)this.MdiParent).conectareToolStripMenuItem.Visible = false;

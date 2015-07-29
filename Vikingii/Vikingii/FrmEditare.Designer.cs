@@ -164,7 +164,6 @@
             this.lbR1.Name = "lbR1";
             this.lbR1.Size = new System.Drawing.Size(120, 30);
             this.lbR1.TabIndex = 13;
-            this.lbR1.Visible = false;
             // 
             // lbR2
             // 
@@ -173,7 +172,6 @@
             this.lbR2.Name = "lbR2";
             this.lbR2.Size = new System.Drawing.Size(120, 30);
             this.lbR2.TabIndex = 14;
-            this.lbR2.Visible = false;
             // 
             // lbR3
             // 
@@ -182,7 +180,6 @@
             this.lbR3.Name = "lbR3";
             this.lbR3.Size = new System.Drawing.Size(120, 30);
             this.lbR3.TabIndex = 15;
-            this.lbR3.Visible = false;
             // 
             // lbR4
             // 
@@ -191,7 +188,6 @@
             this.lbR4.Name = "lbR4";
             this.lbR4.Size = new System.Drawing.Size(120, 30);
             this.lbR4.TabIndex = 16;
-            this.lbR4.Visible = false;
             // 
             // pictureBox1
             // 
@@ -233,7 +229,6 @@
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(170, 30);
             this.lbID.TabIndex = 22;
-            this.lbID.Visible = false;
             // 
             // label1
             // 
@@ -254,7 +249,6 @@
             this.lbRC.Name = "lbRC";
             this.lbRC.Size = new System.Drawing.Size(78, 17);
             this.lbRC.TabIndex = 24;
-            this.lbRC.Visible = false;
             // 
             // FrmEditare
             // 

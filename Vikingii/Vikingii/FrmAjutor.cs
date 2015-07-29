@@ -49,5 +49,16 @@ namespace Imperiul_Britanic
                 this.Top += e.Y - lastPoint.Y;
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form form = new frmBibliografie();
+            form.Show();
+        }
+
+        private void FrmAjutor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((Main)this.MdiParent).fCopil16 = null;
+        }
     }
 }

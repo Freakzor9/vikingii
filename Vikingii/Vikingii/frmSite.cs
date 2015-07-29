@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Imperiul_Britanic
 {
-    public partial class frmBibliografie : Form
+    public partial class frmSite : Form
     {
-        public frmBibliografie()
+        public frmSite()
         {
             InitializeComponent();
         }
@@ -31,13 +31,13 @@ namespace Imperiul_Britanic
             {
                 imagine = 0;
             }
-            pbImagineMare.Image = new Bitmap(cale + "\\bibliografie\\" + lstImagini.Items[imagine]);
+            wb.Navigate(lstImagini.Items[imagine].ToString());
             lbltext.Text = lstLink.Items[imagine].ToString();
         }
 
         private void frmBibliografie_Load(object sender, EventArgs e)
         {
-            pbImagineMare.Image = System.Drawing.Image.FromFile(cale+"\\bibliografie\\" + lstImagini.Items[imagine]);
+            wb.Navigate(lstImagini.Items[imagine].ToString()); 
             lbltext.Text = lstLink.Items[imagine].ToString();
         }
 
@@ -48,7 +48,7 @@ namespace Imperiul_Britanic
             {
                 imagine = lstImagini.Items.Count - 1;
             }
-            pbImagineMare.Image = System.Drawing.Image.FromFile(cale + "\\bibliografie\\" + lstImagini.Items[imagine]);
+            wb.Navigate(lstImagini.Items[imagine].ToString());
             lbltext.Text = lstLink.Items[imagine].ToString();
         }
 
@@ -59,7 +59,7 @@ namespace Imperiul_Britanic
 
         private void frmBibliografie_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ((Main)this.MdiParent).fCopil9 = null;
+            ((Main)this.MdiParent).fCopil18 = null;
         }
     }
 }

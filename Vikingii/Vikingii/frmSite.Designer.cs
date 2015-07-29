@@ -1,6 +1,6 @@
 ﻿namespace Imperiul_Britanic
 {
-    partial class frmBibliografie
+    partial class frmSite
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBibliografie));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSite));
             this.pbInainte = new System.Windows.Forms.PictureBox();
             this.pbInapoi = new System.Windows.Forms.PictureBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbltext = new System.Windows.Forms.Label();
             this.lstImagini = new System.Windows.Forms.ListBox();
             this.lstLink = new System.Windows.Forms.ListBox();
-            this.pbImagineMare = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.wb = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.pbInainte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInapoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagineMare)).BeginInit();
             this.SuspendLayout();
             // 
             // pbInainte
@@ -84,7 +83,7 @@
             // 
             this.lbltext.BackColor = System.Drawing.Color.Transparent;
             this.lbltext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltext.Location = new System.Drawing.Point(50, 438);
+            this.lbltext.Location = new System.Drawing.Point(50, 435);
             this.lbltext.Name = "lbltext";
             this.lbltext.Size = new System.Drawing.Size(449, 62);
             this.lbltext.TabIndex = 26;
@@ -93,10 +92,11 @@
             // 
             this.lstImagini.FormattingEnabled = true;
             this.lstImagini.Items.AddRange(new object[] {
-            "norden.png",
-            "varangian.jpg",
-            "medieval.jpg",
-            "logo.png"});
+            "http://www.britannica.com/topic/Viking-people",
+            "http://stackoverflow.com/questions/5401501/how-to-post-data-to-specific-url-using" +
+                "-webclient-in-c-sharp",
+            "http://stackoverflow.com/questions/566437/http-post-returns-the-error-417-expecta" +
+                "tion-failed-c"});
             this.lstImagini.Location = new System.Drawing.Point(13, 23);
             this.lstImagini.Name = "lstImagini";
             this.lstImagini.Size = new System.Drawing.Size(56, 17);
@@ -107,29 +107,14 @@
             // 
             this.lstLink.FormattingEnabled = true;
             this.lstLink.Items.AddRange(new object[] {
-            "Norden och kontinenten i gammal tid : https://books.google.ro/books?id=7FTUAAAAMA" +
-                "AJ&redir_esc=y",
-            "The Varangian Guard : https://books.google.ro/books?id=rKj8_W9wL7kC&pg=PA3&redir_" +
-                "esc=y#v=onepage&q&f=false",
-            resources.GetString("lstLink.Items"),
-            "http://www.britannica.com/topic/Viking-people"});
+            "Istoria Vikingilor",
+            "Comunicare cu baza de date de pe internet ",
+            "Error 417 Fix"});
             this.lstLink.Location = new System.Drawing.Point(13, 46);
             this.lstLink.Name = "lstLink";
             this.lstLink.Size = new System.Drawing.Size(56, 17);
             this.lstLink.TabIndex = 28;
             this.lstLink.Visible = false;
-            // 
-            // pbImagineMare
-            // 
-            this.pbImagineMare.BackColor = System.Drawing.Color.Transparent;
-            this.pbImagineMare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagineMare.Location = new System.Drawing.Point(50, 57);
-            this.pbImagineMare.Name = "pbImagineMare";
-            this.pbImagineMare.Size = new System.Drawing.Size(449, 375);
-            this.pbImagineMare.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagineMare.TabIndex = 29;
-            this.pbImagineMare.TabStop = false;
-            this.pbImagineMare.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -139,11 +124,19 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.label1.Location = new System.Drawing.Point(189, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 32);
+            this.label1.Size = new System.Drawing.Size(137, 32);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Bibliografie";
+            this.label1.Text = "Sitografie\r\n";
             // 
-            // frmBibliografie
+            // wb
+            // 
+            this.wb.Location = new System.Drawing.Point(54, 50);
+            this.wb.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wb.Name = "wb";
+            this.wb.Size = new System.Drawing.Size(445, 371);
+            this.wb.TabIndex = 31;
+            // 
+            // frmSite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,8 +144,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(555, 574);
+            this.Controls.Add(this.wb);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbImagineMare);
             this.Controls.Add(this.lstLink);
             this.Controls.Add(this.lstImagini);
             this.Controls.Add(this.lbltext);
@@ -161,7 +154,7 @@
             this.Controls.Add(this.pbInapoi);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmBibliografie";
+            this.Name = "frmSite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBibliografie";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBibliografie_FormClosed);
@@ -169,7 +162,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbInainte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInapoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagineMare)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,7 +175,7 @@
         private System.Windows.Forms.Label lbltext;
         private System.Windows.Forms.ListBox lstImagini;
         private System.Windows.Forms.ListBox lstLink;
-        private System.Windows.Forms.PictureBox pbImagineMare;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.WebBrowser wb;
     }
 }

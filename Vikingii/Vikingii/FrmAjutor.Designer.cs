@@ -41,7 +41,7 @@
             // 
             this.textBox2.Enabled = false;
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(689, 181);
+            this.textBox2.Location = new System.Drawing.Point(689, 158);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(157, 222);
@@ -52,7 +52,7 @@
             // 
             this.textBox4.Enabled = false;
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(29, 425);
+            this.textBox4.Location = new System.Drawing.Point(29, 402);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(817, 77);
@@ -65,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.label1.Location = new System.Drawing.Point(258, 30);
+            this.label1.Location = new System.Drawing.Point(312, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 38);
             this.label1.TabIndex = 24;
@@ -75,18 +75,18 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(689, 82);
+            this.textBox1.Location = new System.Drawing.Point(689, 59);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 93);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Pentru a incepe utilizarea acestui soft apasati pe casuta \"Lectii\" din meniul de " +
-    "start . De acolo selectati lectia dorita , si incepeti sa invatati .\r\n";
+                "start . De acolo selectati lectia dorita , si incepeti sa invatati .\r\n";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 82);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(654, 337);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,6 +111,7 @@
             this.Name = "FrmAjutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAjutor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAjutor_FormClosed);
             this.Load += new System.EventHandler(this.FrmAjutor_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmAjutor_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmAjutor_MouseMove);

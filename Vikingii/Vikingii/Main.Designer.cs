@@ -49,11 +49,14 @@
             this.modDeAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorIntrebariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilizatoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sincronizareBazaDeDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.sincronizareBazaDeDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ghidDeUtilizareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bibliografieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sitografieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -255,13 +258,25 @@
             this.utilizatoriToolStripMenuItem.Text = "Utilizatori";
             this.utilizatoriToolStripMenuItem.Click += new System.EventHandler(this.utilizatoriToolStripMenuItem_Click);
             // 
+            // sincronizareBazaDeDateToolStripMenuItem
+            // 
+            this.sincronizareBazaDeDateToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sincronizareBazaDeDateToolStripMenuItem.BackgroundImage")));
+            this.sincronizareBazaDeDateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.sincronizareBazaDeDateToolStripMenuItem.Name = "sincronizareBazaDeDateToolStripMenuItem";
+            this.sincronizareBazaDeDateToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+            this.sincronizareBazaDeDateToolStripMenuItem.Text = "Sincronizare baza de date";
+            this.sincronizareBazaDeDateToolStripMenuItem.Click += new System.EventHandler(this.sincronizareBazaDeDateToolStripMenuItem_Click);
+            // 
             // ajutorToolStripMenuItem
             // 
+            this.ajutorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ghidDeUtilizareToolStripMenuItem,
+            this.bibliografieToolStripMenuItem1,
+            this.sitografieToolStripMenuItem1});
             this.ajutorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
             this.ajutorToolStripMenuItem.Name = "ajutorToolStripMenuItem";
             this.ajutorToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.ajutorToolStripMenuItem.Text = "Ajutor";
-            this.ajutorToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -290,14 +305,32 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // sincronizareBazaDeDateToolStripMenuItem
+            // ghidDeUtilizareToolStripMenuItem
             // 
-            this.sincronizareBazaDeDateToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sincronizareBazaDeDateToolStripMenuItem.BackgroundImage")));
-            this.sincronizareBazaDeDateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
-            this.sincronizareBazaDeDateToolStripMenuItem.Name = "sincronizareBazaDeDateToolStripMenuItem";
-            this.sincronizareBazaDeDateToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
-            this.sincronizareBazaDeDateToolStripMenuItem.Text = "Sincronizare baza de date";
-            this.sincronizareBazaDeDateToolStripMenuItem.Click += new System.EventHandler(this.sincronizareBazaDeDateToolStripMenuItem_Click);
+            this.ghidDeUtilizareToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ghidDeUtilizareToolStripMenuItem.BackgroundImage")));
+            this.ghidDeUtilizareToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.ghidDeUtilizareToolStripMenuItem.Name = "ghidDeUtilizareToolStripMenuItem";
+            this.ghidDeUtilizareToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.ghidDeUtilizareToolStripMenuItem.Text = "Ghid de utilizare";
+            this.ghidDeUtilizareToolStripMenuItem.Click += new System.EventHandler(this.ajutorToolStripMenuItem_Click);
+            // 
+            // bibliografieToolStripMenuItem1
+            // 
+            this.bibliografieToolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bibliografieToolStripMenuItem1.BackgroundImage")));
+            this.bibliografieToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.bibliografieToolStripMenuItem1.Name = "bibliografieToolStripMenuItem1";
+            this.bibliografieToolStripMenuItem1.Size = new System.Drawing.Size(211, 30);
+            this.bibliografieToolStripMenuItem1.Text = "Bibliografie";
+            this.bibliografieToolStripMenuItem1.Click += new System.EventHandler(this.bibliografieToolStripMenuItem_Click_1);
+            // 
+            // sitografieToolStripMenuItem1
+            // 
+            this.sitografieToolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sitografieToolStripMenuItem1.BackgroundImage")));
+            this.sitografieToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(1)))), ((int)(((byte)(125)))));
+            this.sitografieToolStripMenuItem1.Name = "sitografieToolStripMenuItem1";
+            this.sitografieToolStripMenuItem1.Size = new System.Drawing.Size(211, 30);
+            this.sitografieToolStripMenuItem1.Text = "Sitografie";
+            this.sitografieToolStripMenuItem1.Click += new System.EventHandler(this.sitografieToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -352,6 +385,9 @@
         public System.Windows.Forms.ToolStripMenuItem conectareToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem deconectareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sincronizareBazaDeDateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ghidDeUtilizareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bibliografieToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sitografieToolStripMenuItem1;
 
     }
 }

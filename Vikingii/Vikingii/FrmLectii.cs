@@ -148,7 +148,7 @@ namespace Imperiul_Britanic
                  rtInceputuri.ReadOnly = false;
                  rtInceputuri.Enabled = true;
                  pbAdaugare.Visible = true;
-                 tbIstoricTitlu.ReadOnly = false;
+             //    tbIstoricTitlu.ReadOnly = false;
                  tbIstoricTitlu.Enabled = true;
              //    tbImgAd.Visible = true;
                  pbImagineMare.Visible = false;

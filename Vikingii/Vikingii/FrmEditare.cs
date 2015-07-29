@@ -147,6 +147,7 @@ namespace Imperiul_Britanic
                 lbR3.Items.Add(r["R3"].ToString());
                 lbR4.Items.Add(r["R4"].ToString());
                 lbID.Items.Add(r["ID"].ToString());
+                lbRC.Items.Add(r["RCorect"].ToString());
             }
             lbIntrebari.Items.Add("                                        [Adauga o intrebare]");
             MessageBox.Show("Intrebare adaugata!");

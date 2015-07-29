@@ -32,6 +32,8 @@ namespace Imperiul_Britanic
         public frmProfil fCopil14 = null;
         public frmUtilizatori fCopil15 = null;
         public frmSynch fCopil16 = null;
+        public frmBibliografie fCopil17 = null;
+        public frmSite fCopil18 = null;
 
         public string nume,nume2;
 
@@ -345,6 +347,26 @@ namespace Imperiul_Britanic
                 fCopil16 = new frmSynch();
                 fCopil16.MdiParent = this;
                 fCopil16.Show();
+            }
+        }
+
+        private void bibliografieToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (fCopil17 == null)
+            {
+                fCopil17 = new frmBibliografie();
+                fCopil17.MdiParent = this;
+                fCopil17.Show();
+            }
+        }
+
+        private void sitografieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fCopil18 == null)
+            {
+                fCopil18 = new frmSite();
+                fCopil18.MdiParent = this;
+                fCopil18.Show();
             }
         }
     }
